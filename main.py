@@ -15,7 +15,6 @@ parameters = {
 }
 
 
-
 response = requests.get(url=OWN_Endpoint, params=parameters)
 response.raise_for_status()
 weather_data = response.json()["weather"][0]["id"]
