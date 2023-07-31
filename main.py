@@ -26,4 +26,3 @@ if int(weather_data) < 700:
         to="RECIPIENT PHONE NUMBER"
         )
     print(message.status)
-    
