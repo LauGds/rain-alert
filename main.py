@@ -3,10 +3,10 @@ from twilio.rest import Client
 
 OWN_Endpoint = "https://api.openweathermap.org/data/2.5/weather?"
 api_key = "API KEY"
-LAT = "LATITUDE"
-LON = "LONGITUDE"
-account_sid = "ACCOUNT SID"
-auth_token = "TOKEN"
+LAT = "<LATITUDE>"
+LON = "<LONGITUDE>"
+account_sid = "<ACCOUNT SID>"
+auth_token = "<TOKEN>"
 
 parameters = {
     "appid": api_key,
@@ -22,7 +22,7 @@ if int(weather_data) < 700:
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body="It's going to rain today. Remember to bring an ☔.",
-        from_="SENDER PHONE NUMBER",
-        to="RECIPIENT PHONE NUMBER"
+        from_="<SENDER PHONE NUMBER>",
+        to="<RECIPIENT PHONE NUMBER>"
         )
     print(message.status)
